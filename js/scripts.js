@@ -1,34 +1,35 @@
-/*!
-* Start Bootstrap - Resume v7.0.6 (https://startbootstrap.com/theme/resume)
-* Copyright 2013-2023 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-resume/blob/master/LICENSE)
-*/
-//
-// Scripts
-// 
+// Modern CV JS by AI
 
-window.addEventListener('DOMContentLoaded', event => {
-
-    // Activate Bootstrap scrollspy on the main nav element
-    const sideNav = document.body.querySelector('#sideNav');
-    if (sideNav) {
-        new bootstrap.ScrollSpy(document.body, {
-            target: '#sideNav',
-            rootMargin: '0px 0px -40%',
-        });
-    };
-
-    // Collapse responsive navbar when toggler is visible
-    const navbarToggler = document.body.querySelector('.navbar-toggler');
-    const responsiveNavItems = [].slice.call(
-        document.querySelectorAll('#navbarResponsive .nav-link')
-    );
-    responsiveNavItems.map(function (responsiveNavItem) {
-        responsiveNavItem.addEventListener('click', () => {
-            if (window.getComputedStyle(navbarToggler).display !== 'none') {
-                navbarToggler.click();
+document.addEventListener('DOMContentLoaded', function () {
+    // Smooth scroll for nav links
+    document.querySelectorAll('.nav a').forEach(link => {
+        link.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            if (href.startsWith('#')) {
+                e.preventDefault();
+                document.querySelector(href).scrollIntoView({ behavior: 'smooth' });
+                // Set active class
+                document.querySelectorAll('.nav a').forEach(a => a.classList.remove('active'));
+                this.classList.add('active');
             }
         });
     });
 
+    // Section reveal on scroll
+    const revealSections = document.querySelectorAll('.card');
+    const revealOnScroll = () => {
+        const trigger = window.innerHeight * 0.92;
+        revealSections.forEach(section => {
+            const rect = section.getBoundingClientRect();
+            if (rect.top < trigger) {
+                section.style.opacity = 1;
+                section.style.transform = 'none';
+            } else {
+                section.style.opacity = 0;
+                section.style.transform = 'translateY(40px)';
+            }
+        });
+    };
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll();
 });
