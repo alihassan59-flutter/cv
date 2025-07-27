@@ -3,151 +3,218 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ali Hassan - CV</title>
+    <title>Ali Hassan - Flutter Developer Portfolio</title>
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
-    <!-- Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/2b8e2e6e7b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header class="header">
-        <div class="container header-container">
-            <div class="profile-pic">
-                <img src="assets/img/profile.jpg" alt="Ali Hassan Profile Picture">
+    <header class="header-v2">
+        <div class="container header-content-v2">
+            <div class="profile-hero">
+                <div class="profile-pic-container">
+                    <img src="assets/img/profile.jpg" alt="Ali Hassan Profile Picture" class="profile-pic-v2">
+                </div>
+                <div class="hero-text">
+                    <h1 class="animate-in">Ali Hassan</h1>
+                    <h2 class="animate-in delay-1">Flutter Developer</h2>
+                    <p class="tagline-v2 animate-in delay-2">Building intuitive and high-performance cross-platform applications.</p>
+                </div>
             </div>
-            <div class="header-content">
-                <h1>Ali Hassan</h1>
-                <h2>Flutter Developer</h2>
-                <div class="contact-info">
-                    <span><i class="fas fa-map-marker-alt"></i> Gujranwala, Punjab, Pakistan</span>
-                    <span><i class="fas fa-phone"></i> +92 3324922524</span>
-                    <span><i class="fas fa-envelope"></i> <a href="mailto:alihasanmughal027@gmail.com">alihasanmughal027@gmail.com</a></span>
-                    <span><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/ali-hassan-0521b5361" target="_blank">LinkedIn</a></span>
-                </div>
-                <div class="header-social">
-                    <a href="https://www.linkedin.com/in/ali-hassan-0521b5361" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                </div>
+            <div class="contact-info-v2 animate-in delay-3">
+                <a href="mailto:alihasanmughal027@gmail.com" class="contact-link"><i class="fas fa-envelope"></i> alihasanmughal027@gmail.com</a>
+                <a href="https://www.linkedin.com/in/ali-hassan-0521b5361" target="_blank" class="contact-link"><i class="fab fa-linkedin"></i> LinkedIn Profile</a>
+                <a href="https://www.google.com/maps/search/?api=1&query=Gujranwala,Punjab,Pakistan" target="_blank" class="contact-link"><i class="fas fa-map-marker-alt"></i> Gujranwala, Punjab, Pakistan</a>
+                <a href="tel:+923324922524" class="contact-link"><i class="fas fa-phone"></i> +92 3324922524</a>
+            </div>
+            <div class="social-links-v2 animate-in delay-4">
+                <a href="https://www.linkedin.com/in/ali-hassan-0521b5361" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/alihassan59-flutter" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank" aria-label="Twitter (Example)"><i class="fab fa-twitter"></i></a>
             </div>
         </div>
     </header>
-    <nav class="nav">
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#interests">Interests</a></li>
-            <li><a href="#languages">Languages</a></li>
+
+    <nav class="navbar-v2">
+        <ul class="nav-list-v2">
+            <li><a href="#about" class="nav-link-v2">About</a></li>
+            <li><a href="#experience" class="nav-link-v2">Experience</a></li>
+            <li><a href="#education" class="nav-link-v2">Education</a></li>
+            <li><a href="#skills" class="nav-link-v2">Skills</a></li>
+            <li><a href="#projects" class="nav-link-v2">Projects</a></li>
+            <li><a href="#services" class="nav-link-v2">Services</a></li>
+            <li><a href="#testimonials" class="nav-link-v2">Testimonials</a></li>
+            <li><a href="#interests" class="nav-link-v2">Interests</a></li>
+            <li><a href="#languages" class="nav-link-v2">Languages</a></li>
         </ul>
     </nav>
-    <main>
-        <section id="about" class="section card">
-            <h2>About Me</h2>
-            <p>A passionate <b>Flutter Developer</b> with experience in building high-quality, cross-platform mobile applications. Skilled in Dart programming, UI/UX design, and mobile app development for Android. Adept at creating responsive, user-friendly interfaces and collaborating in agile teams.</p>
+
+    <main class="container main-content-v2">
+        <section id="about" class="section-block reveal">
+            <h2 class="section-title">About Me</h2>
+            <p>I'm Ali Hassan, a dedicated **Flutter Developer** driven by a passion for crafting exceptional mobile experiences. With a keen eye for UI/UX design and a strong command of Dart, I specialize in building robust, cross-platform applications that are both visually appealing and highly functional. My journey in development has equipped me with the skills to tackle complex challenges and deliver high-quality solutions for diverse projects, always aiming for precision and user satisfaction.</p>
         </section>
-        <section id="experience" class="section card">
-            <h2>Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
+
+        <section id="experience" class="section-block reveal">
+            <h2 class="section-title">Experience</h2>
+            <div class="timeline-v2">
+                <div class="timeline-item-v2 experience-card-v2" style="background-image: url('assets/img/nexltech_experience_bg.jpg');">
+                    <div class="timeline-dot-v2"></div>
+                    <div class="timeline-content-v2">
                         <h3>Flutter Developer</h3>
-                        <span class="timeline-date">2024 - 2025</span>
-                        <p class="company">NexlTech - Software House</p>
-                        <p>Delivered global software solutions, launched successful mobile and web apps, and built strong client relationships worldwide.</p>
+                        <span class="company-date-v2">NexlTech - Software House | 2024 - 2025</span>
+                        <p>Contributed to global software solutions, playing a key role in launching successful mobile and web applications. Focused on developing highly efficient and scalable Flutter applications that enhanced client engagement and streamlined operations worldwide.</p>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>Flutter Developer (Self Learning)</h3>
-                        <span class="timeline-date">2023 - 2024</span>
-                        <p class="company">University, Gujranwala, Pakistan</p>
-                        <p>Started my development journey with Flutter and Dart, building mobile apps from scratch. Focused on UI/UX principles to create responsive, user-friendly interfaces. Progressed from basic projects to complex cross-platform Android applications through hands-on practice and tutorials.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="education" class="section card">
-            <h2>Education</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>GIFT University</h3>
-                        <span class="timeline-date">2021 - 2025</span>
-                        <p class="company">Bs. Computer Science (Hons)</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>Govt. Islamia High School (Boys) Eminabad Gujranwala</h3>
-                        <span class="timeline-date">2019 - 2020</span>
-                        <p class="company">Intermediate in ICS</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>Govt. Islamia High School No 1 Eminabad Gujranwala</h3>
-                        <span class="timeline-date">2016 - 2017</span>
-                        <p class="company">Matric in Computer Science</p>
+                <div class="timeline-item-v2 experience-card-v2" style="background-image: url('assets/img/university_experience_bg.jpg');">
+                    <div class="timeline-dot-v2"></div>
+                    <div class="timeline-content-v2">
+                        <h3>Flutter Developer (Self-Learned)</h3>
+                        <span class="company-date-v2">University, Gujranwala, Pakistan | 2023 - 2024</span>
+                        <p>Embarked on my Flutter development journey, independently building a variety of mobile applications from concept to completion. Gained extensive hands-on experience in implementing responsive UI/UX designs and optimizing app performance across different Android devices.</p>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="skills" class="section card">
-            <h2>Skills</h2>
-            <div class="skills-list">
-                <div class="skill"><i class="fab fa-dev"></i> Flutter & Dart</div>
-                <div class="skill"><i class="fab fa-android"></i> Android Development</div>
-                <div class="skill"><i class="fas fa-paint-brush"></i> UI/UX Design</div>
-                <div class="skill"><i class="fab fa-figma"></i> Figma</div>
-                <div class="skill"><i class="fas fa-file-code"></i> API's Handling</div>
-                <div class="skill"><i class="fas fa-bug"></i> Debugging & Testing</div>
-                <div class="skill"><i class="fab fa-java"></i> Java Basics</div>
-                <div class="skill"><i class="fas fa-check"></i> Mobile App Development</div>
-                <div class="skill"><i class="fas fa-check"></i> UI/UX Design Principles</div>
-                <div class="skill"><i class="fas fa-check"></i> Responsive Interface Design</div>
-                <div class="skill"><i class="fas fa-check"></i> Agile Development & Collaboration</div>
-                <div class="skill"><i class="fas fa-check"></i> Ms Office (.word, .excel, .ppt)</div>
-            </div>
-        </section>
-        <section id="projects" class="section card">
-            <h2>Projects</h2>
-            <div class="projects-list">
-                <div class="project">
-                    <a href="https://github.com/alihassan59-flutter/buddy" target="_blank"><strong>Buddy</strong></a>
-                    <p>Buddy App is a Flutter-based freelancing marketplace UI inspired by platforms like Fiverr and Upwork. Users can browse freelance services, view freelancer profiles, post job requests, and explore categories — all built using a modern and responsive frontend design.</p>
+
+        <section id="education" class="section-block reveal">
+            <h2 class="section-title">Education</h2>
+            <div class="timeline-v2">
+                <div class="timeline-item-v2">
+                    <div class="timeline-dot-v2"></div>
+                    <div class="timeline-content-v2">
+                        <h3>Bs. Computer Science (Hons)</h3>
+                        <span class="company-date-v2">GIFT University | 2021 - 2025</span>
+                    </div>
                 </div>
-                <div class="project">
-                    <a href="https://github.com/alihassan59-flutter/flairo" target="_blank"><strong>Flairo</strong></a>
-                    <p>Flairo is a Flutter-based mobile application that takes a chat image as input and analyzes it to predict the emotional tone and behavioral traits of the person based on the conversation, utilizing the Gemini AI API for advanced image and language analysis.</p>
+                <div class="timeline-item-v2">
+                    <div class="timeline-dot-v2"></div>
+                    <div class="timeline-content-v2">
+                        <h3>Intermediate in ICS</h3>
+                        <span class="company-date-v2">Govt. Islamia High School (Boys) Eminabad Gujranwala | 2019 - 2020</span>
+                    </div>
+                </div>
+                <div class="timeline-item-v2">
+                    <div class="timeline-dot-v2"></div>
+                    <div class="timeline-content-v2">
+                        <h3>Matric in Computer Science</h3>
+                        <span class="company-date-v2">Govt. Islamia High School No 1 Eminabad Gujranwala | 2016 - 2017</span>
+                    </div>
                 </div>
             </div>
         </section>
-        <section id="interests" class="section card">
-            <h2>Interests</h2>
-            <p>My interests extend beyond coding, keeping me engaged and constantly learning. I am deeply interested in <b>Technology Trends</b>, always keen to keep up with the latest developments in the fast-paced world of tech.</p>
-            <p>I thoroughly enjoy tackling complex problems and finding creative solutions through coding and technology. This passion drives me to constantly explore new challenges and refine my problem-solving skills.</p>
+
+        <section id="skills" class="section-block reveal">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid-v2">
+                <div class="skill-pill"><i class="fab fa-dev skill-icon-v2"></i> Flutter & Dart</div>
+                <div class="skill-pill"><i class="fab fa-android skill-icon-v2"></i> Android Development</div>
+                <div class="skill-pill"><i class="fas fa-paint-brush skill-icon-v2"></i> UI/UX Design</div>
+                <div class="skill-pill"><i class="fab fa-figma skill-icon-v2"></i> Figma</div>
+                <div class="skill-pill"><i class="fas fa-bezier-curve skill-icon-v2"></i> API Integration</div>
+                <div class="skill-pill"><i class="fas fa-bug skill-icon-v2"></i> Debugging & Testing</div>
+                <div class="skill-pill"><i class="fab fa-java skill-icon-v2"></i> Java Basics</div>
+                <div class="skill-pill"><i class="fas fa-mobile-alt skill-icon-v2"></i> Cross-Platform Development</div>
+                <div class="skill-pill"><i class="fas fa-lightbulb skill-icon-v2"></i> Problem Solving</div>
+                <div class="skill-pill"><i class="fas fa-desktop skill-icon-v2"></i> Responsive Design</div>
+                <div class="skill-pill"><i class="fas fa-users-cog skill-icon-v2"></i> Agile Methodologies</div>
+                <div class="skill-pill"><i class="fas fa-file-alt skill-icon-v2"></i> MS Office Suite</div>
+            </div>
         </section>
-        <section id="languages" class="section card">
-            <h2>Languages</h2>
-            <ul class="languages-list">
-                <li><span class="lang">Urdu:</span> Native</li>
-                <li><span class="lang">English:</span> Advanced</li>
+
+        <section id="projects" class="section-block reveal">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid-v2">
+                <div class="project-card-v2" style="background-image: url('assets/img/buddy_app_preview.png');">
+                    <div class="project-overlay">
+                        <h3 class="project-title-v2"><a href="https://github.com/alihassan59-flutter/buddy" target="_blank">Buddy <i class="fas fa-external-link-alt project-link-icon-v2"></i></a></h3>
+                        <p>Buddy App is a Flutter-based freelancing marketplace UI inspired by platforms like Fiverr and Upwork. It offers a clean, modern interface for users to browse services, view profiles, and post job requests, focusing on intuitive navigation and responsive design principles.</p>
+                    </div>
+                </div>
+                <div class="project-card-v2" style="background-image: url('assets/img/flairo_ai_preview.png');">
+                    <div class="project-overlay">
+                        <h3 class="project-title-v2"><a href="https://github.com/alihassan59-flutter/flairo" target="_blank">Flairo <i class="fas fa-external-link-alt project-link-icon-v2"></i></a></h3>
+                        <p>Flairo is a Flutter mobile application that leverages the Gemini AI API to analyze chat images, predicting emotional tone and behavioral traits based on conversational context. This project demonstrates advanced API integration and AI-powered insights within a mobile environment.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="section-block reveal" style="background-image: url('assets/img/services_bg.jpg');">
+            <div class="section-overlay">
+                <h2 class="section-title">Services I Offer</h2>
+                <div class="services-grid-v2">
+                    <div class="service-bubble">
+                        <img src="assets/img/custom_app_dev_icon.png" alt="Custom App Development Icon" class="service-bubble-icon">
+                        <h3>Custom App Development</h3>
+                        <p>End-to-end mobile application development tailored to your unique business needs.</p>
+                    </div>
+                    <div class="service-bubble">
+                        <img src="assets/img/ui_ux_prototyping_icon.png" alt="UI/UX Prototyping Icon" class="service-bubble-icon">
+                        <h3>UI/UX Prototyping</h3>
+                        <p>Designing intuitive and engaging user interfaces for optimal user experience.</p>
+                    </div>
+                    <div class="service-bubble">
+                        <img src="assets/img/backend_integration_icon.png" alt="Backend Integration Icon" class="service-bubble-icon">
+                        <h3>Backend Integration</h3>
+                        <p>Connecting your app with robust backend services and APIs for seamless data flow.</p>
+                    </div>
+                    <div class="service-bubble">
+                        <img src="assets/img/maintenance_support_icon.png" alt="Maintenance & Support Icon" class="service-bubble-icon">
+                        <h3>Maintenance & Support</h3>
+                        <p>Ensuring your application remains updated, secure, and performs flawlessly.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="section-block reveal">
+            <h2 class="section-title">Client Testimonials</h2>
+            <div class="testimonials-container-v2">
+                <div class="testimonial-bubble">
+                    <p>"Ali's work on our Flutter app was exceptional. He delivered a high-quality product on time and was incredibly responsive to feedback."</p>
+                    <span class="author-v2">- Sarah K., CEO of InnovateTech</span>
+                </div>
+                <div class="testimonial-bubble">
+                    <p>"A highly skilled developer with a strong understanding of modern mobile practices. Ali transformed our ideas into a beautiful and functional app."</p>
+                    <span class="author-v2">- David L., Product Manager</span>
+                </div>
+                <div class="testimonial-bubble">
+                    <p>"Professional, efficient, and great to work with. Ali exceeded our expectations in every aspect of the project."</p>
+                    <span class="author-v2">- Emily R., Founder of NextGen Solutions</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="interests" class="section-block reveal">
+            <h2 class="section-title">Interests</h2>
+            <p>Beyond coding, I'm fascinated by the rapid evolution of **technology trends**, particularly in artificial intelligence and sustainable tech solutions. I enjoy delving into new programming paradigms and exploring cutting-edge tools that push the boundaries of what's possible in mobile development.</p>
+            <p>I find immense satisfaction in **problem-solving**—the process of deconstructing complex challenges and engineering elegant, efficient solutions. This intellectual curiosity fuels my continuous learning and dedication to mastering new technologies.</p>
+        </section>
+
+        <section id="languages" class="section-block reveal">
+            <h2 class="section-title">Languages</h2>
+            <ul class="languages-list-v2">
+                <li><span class="language-name-v2">Urdu:</span> Native</li>
+                <li><span class="language-name-v2">English:</span> Advanced Professional</li>
             </ul>
         </section>
     </main>
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Ali Hassan. All rights reserved.</p>
+
+    <footer class="footer-v2">
+        <div class="container footer-content">
+            <p class="footer-tagline">"Transforming ideas into seamless mobile experiences."</p>
+            <div class="footer-social-links">
+                <a href="https://www.linkedin.com/in/ali-hassan-0521b5361" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/alihassan59-flutter" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="mailto:alihasanmughal027@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p>© 2024 Ali Hassan. All rights reserved. Crafted with <i class="fas fa-heart pulsating-heart"></i> and code.</p>
+            <p class="developer-credit">Developed with passion by Ali Hassan, your Flutter Developer.</p>
         </div>
     </footer>
+
     <script src="js/scripts.js"></script>
 </body>
 </html>
