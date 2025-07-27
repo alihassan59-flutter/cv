@@ -234,6 +234,14 @@ strong {
     transition: background-color var(--transition-medium), box-shadow var(--transition-medium);
 }
 
+/* Ensure container within navbar is also flex for mobile */
+.navbar-v2 .nav-container {
+    display: flex;
+    justify-content: center; /* Center the nav list by default */
+    align-items: center;
+    position: relative; /* For hamburger button positioning */
+}
+
 /* Sticky Navbar State - Now a solid dark color */
 .navbar-v2.sticky {
     background-color: #0A0A0A; /* Solid dark background for the sticky state */
@@ -283,6 +291,43 @@ strong {
 .nav-link-v2.active::before {
     transform: translateX(-50%) scaleX(1);
 }
+
+/* Hamburger Menu Icon */
+.hamburger {
+    display: none; /* Hidden by default on larger screens */
+    background: none;
+    border: none;
+    font-size: 2em;
+    color: var(--accent-color-1);
+    cursor: pointer;
+    z-index: 1100; /* Above nav list */
+    transition: color var(--transition-fast);
+}
+
+.hamburger:hover {
+    color: var(--accent-color-2);
+}
+
+/* Mobile Menu Overlay */
+.mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent dark overlay */
+    backdrop-filter: blur(5px);
+    z-index: 999; /* Below navigation, above content */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--transition-medium), visibility var(--transition-medium);
+}
+
+.mobile-menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
 
 /* Main Content & Section Blocks */
 .main-content-v2 {
@@ -630,7 +675,7 @@ strong {
 
 .section-overlay {
     background-color: rgba(10, 10, 10, 0.85); /* Dark overlay for blur effect */
-    backdrop-filter: blur(8px); /* Blur effect */
+    backdrop-filter: blur(8px);
     padding: 50px; /* Apply padding here */
     border-radius: 12px; /* Match parent border-radius */
     min-height: inherit; /* Ensure overlay covers content */
@@ -784,12 +829,6 @@ strong {
     border-color: var(--accent-color-1);
 }
 
-.language-name-v2 {
-    font-weight: 700;
-    color: var(--accent-color-1);
-    font-size: 1.1em;
-}
-
 
 /* Footer V2 */
 .footer-v2 {
@@ -865,7 +904,7 @@ strong {
 }
 
 
-/* Responsive Design V2 */
+/* Responsive Design V2 - Adjusted for Mobile Menu & Header Height */
 @media (max-width: 992px) {
     h1 {
         font-size: 3em;
@@ -934,6 +973,14 @@ strong {
 }
 
 @media (max-width: 768px) {
+    /* Reduce Header Height */
+    .header-v2 {
+        padding: 40px 0; /* Reduced padding */
+    }
+    .header-content-v2 {
+        gap: 25px; /* Reduced gap */
+    }
+
     h1 {
         font-size: 2.5em;
     }
@@ -946,10 +993,6 @@ strong {
     }
     h3 {
         font-size: 1.5em;
-    }
-
-    .header-content-v2 {
-        gap: 30px;
     }
 
     .profile-pic-v2 {
@@ -970,19 +1013,70 @@ strong {
         gap: 8px;
     }
 
+    .social-links-v2 {
+        margin-top: 20px; /* Adjusted margin */
+    }
     .social-links-v2 a {
         font-size: 2em;
     }
 
+    /* Mobile Navigation Specifics */
+    .navbar-v2 .nav-container {
+        justify-content: flex-end; /* Push hamburger to right */
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger icon */
+        position: absolute; /* Position it absolutely within the container */
+        left: 25px; /* Align to the left of the container */
+    }
+
     .nav-list-v2 {
+        position: fixed; /* Fixed to viewport */
+        top: 0;
+        left: -100%; /* Off-screen by default */
+        width: 80%; /* Takes 80% of screen width */
+        max-width: 300px; /* Max width for larger tablets */
+        height: 100%;
+        background-color: var(--card-bg-dark); /* Menu background */
         flex-direction: column;
-        gap: 15px;
+        justify-content: flex-start; /* Align links to top */
+        align-items: flex-start; /* Align links to left */
+        padding: 80px 20px 20px; /* Padding for content inside menu */
+        box-shadow: 5px 0 15px rgba(0, 0, 0, 0.5);
+        transition: left var(--transition-medium); /* Slide transition */
+        z-index: 1050; /* Above overlay, below hamburger button */
+    }
+
+    .nav-list-v2.active {
+        left: 0; /* Slide in */
+    }
+
+    .nav-list-v2 li {
+        width: 100%;
+        margin-bottom: 10px; /* Space between links */
     }
 
     .nav-link-v2 {
-        width: 90%;
-        text-align: center;
+        display: block; /* Make links block level */
+        width: 100%; /* Full width within menu */
+        text-align: left; /* Align text left */
+        padding: 15px 20px; /* More padding for tap targets */
+        border-radius: 8px; /* Slightly larger radius */
     }
+    .nav-link-v2::before { /* Remove underline animation for mobile menu */
+        display: none;
+    }
+    .nav-link-v2:hover,
+    .nav-link-v2.active {
+        background-color: rgba(0, 230, 118, 0.1); /* Subtle background highlight on hover/active */
+        color: var(--accent-color-1);
+    }
+    .nav-link-v2:hover::before,
+    .nav-link-v2.active::before { /* Ensure no underline animation */
+        transform: none;
+    }
+
 
     .section-block {
         padding: 30px;
@@ -1032,6 +1126,23 @@ strong {
 }
 
 @media (max-width: 480px) {
+    /* Further Header Reduction */
+    .header-v2 {
+        padding: 30px 0; /* Even less padding */
+    }
+    .header-content-v2 {
+        gap: 20px;
+    }
+    .hero-text h1 {
+        font-size: 2em; /* Smaller font for smallest screens */
+    }
+    .hero-text h2 {
+        font-size: 1.5em;
+    }
+    .tagline-v2 {
+        font-size: 1em;
+    }
+
     h1 {
         font-size: 2em;
     }
@@ -1040,10 +1151,6 @@ strong {
     }
     h3 {
         font-size: 1.3em;
-    }
-
-    .header-v2 {
-        padding: 40px 0;
     }
 
     .profile-pic-v2 {
@@ -1058,6 +1165,9 @@ strong {
         font-size: 0.9em;
     }
 
+    .social-links-v2 {
+        gap: 20px; /* Slightly reduced gap */
+    }
     .social-links-v2 a {
         font-size: 1.8em;
     }
